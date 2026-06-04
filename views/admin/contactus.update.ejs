@@ -1,0 +1,31 @@
+<%- include('header.ejs'); %>
+
+<div class="row">
+  <div class="col-12">
+
+    <h1>Welcome Upadate Contact Info</h1>
+
+  </div>
+  <div class="col-12 bg-light p-4">
+    <form action="/admin/contactus_update" method="post" enctype="multipart/form-data">
+             <label>Logo</label>
+             <input type="hidden" class="form-control mb-3" name="logo_old" value="<%=data.logo%>">
+             <input type="file" class="form-control mb-3" name="logo">
+              <label>Email</label>
+              <img src="value=<%=data.logo%>">
+             <input type="text" value="<%=data.email%>" class="form-control mb-3" name="email">
+             <label>Mobile</label>
+             <input type="text" value="<%=data.mobile%>" class="form-control mb-3" name="mobile">
+             <label>Address</label>
+             <input type="text" value="<%=data.address%>" class="form-control mb-3" name="address">
+             <label>Map</label>
+             <input type="text" value="<%=data.map%>" class="form-control mb-3" name="map">
+
+             <button class="btn btn-primary">Upadate</button>
+
+    </form>
+  </div>
+
+</div>
+
+<%- include('footer.ejs'); %>

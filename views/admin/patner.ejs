@@ -1,0 +1,41 @@
+<%- include('header.ejs'); %>
+
+<div class="row">
+  <div class="col-12">
+
+    <h1>Welcome Patner Panel</h1>
+
+  </div>
+
+  <div class="col-12" >
+       <form action="/admin/patner_save" method="post" enctype="multipart/form-data">
+        <label>Patner Image</label>
+        <input type="file" name="pimage" class="form-control mb-4" >
+        <button class="btn btn-primary">Save</button>
+       </form>
+  </div>
+
+  <div class="col-12 table-responsive">
+    <table class="table table-primary ">
+        <tr>
+            <th>Sr. No</th>
+            <th>Image</th>
+            <th>Status</th>
+        </tr>
+        <% for(var i=0;i<data.length;i++){%>
+         <tr>
+            <td><%= i+1 %></td>
+            <td>
+                <img src="/<%= data[i].pimage %> ">
+            </td>
+            <td>
+                <a><button class="btn btn-danger">Delete</button></a>
+                <a><button class="btn btn-warning">Edit</button></a>
+            </td>
+        </tr>
+        <% } %>
+    </table>
+  </div>
+</div>
+
+<%- include('footer.ejs'); %>

@@ -1,0 +1,47 @@
+<%- include('header.ejs'); %>
+
+<div class="row">
+  <div class="col-12">
+
+    <h1>Welcome Why Panel</h1>
+
+  </div>
+
+  <div class="col-12" >
+       <form action="/admin/whyus_save" method="post">
+        <label>Icon</label>
+        <input type="text" name="icon" class="form-control mb-4" >
+        <label>Title</label>
+        <input type="text" name="title" class="form-control mb-4">
+        <label>Desc</label>
+        <input type="text" name="desc" class="form-control mb-4">
+        <button class="btn btn-primary">Save</button>
+       </form>
+  </div>
+
+  <div class="col-12 table-responsive">
+    <table class="table table-primary ">
+        <tr>
+            <th>Sr. No</th>
+            <th>Icon</th>
+            <th>Title</th>
+            <th>Desc</th>
+            <th>Status</th>
+        </tr>
+        <% for(var i=0;i<data.length;i++){%>
+         <tr>
+            <td><%= i+1 %></td>
+            <td><%= data[i].icon %></td>
+            <td><%= data[i].title%></td>
+            <td><%= data[i].description %></td>
+            <td>
+                <a><button class="btn btn-danger">Delete</button></a>
+                <a><button class="btn btn-warning">Edit</button></a>
+            </td>
+        </tr>
+        <% } %>
+    </table>
+  </div>
+</div>
+
+<%- include('footer.ejs'); %>
