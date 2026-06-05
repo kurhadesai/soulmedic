@@ -27,6 +27,6 @@ app.use('/',user);
 app.use('/admin',admin);
 
 
-app.listen(3000);
+// app.listen(3000);
 
-// app.listen(3000 || process.env.PORT);
+app.listen(3000 || process.env.PORT);
