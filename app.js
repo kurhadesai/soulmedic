@@ -1,7 +1,7 @@
 var express=require('express');
 var session=require('express-session');
 var fileupload=require('express-fileupload');
-require("dotenv").config()
+// require("dotenv").config()
 
 
 var app=express();
@@ -27,4 +27,6 @@ app.use('/',user);
 app.use('/admin',admin);
 
 
-app.listen(3000 || process.env.PORT);
+app.listen(3000);
+
+// app.listen(3000 || process.env.PORT);
