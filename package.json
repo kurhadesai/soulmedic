@@ -20,10 +20,19 @@
   },
   "homepage": "https://github.com/kurhadesai/soulmedic#readme",
   "dependencies": {
+    "bcrypt": "^6.0.0",
+    "body-parser": "^2.3.0",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.6",
     "dotenv": "^17.4.2",
     "ejs": "^6.0.1",
     "express": "^5.2.1",
+    "express-fileupload": "^1.5.2",
     "express-session": "^1.19.0",
-    "mysql2": "^3.22.5"
+    "jsonwebtoken": "^9.0.3",
+    "method-override": "^3.0.0",
+    "multer": "^2.2.0",
+    "mysql2": "^3.22.6",
+    "nodemon": "^3.1.14"
   }
 }
